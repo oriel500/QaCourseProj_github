@@ -6,4 +6,5 @@ for letter in string:
     if letter == char:
         count += 1
 
+print(string.count(char))
 print(count)

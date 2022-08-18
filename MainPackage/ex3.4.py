@@ -1,8 +1,8 @@
 from random import randint
 
 # number between 0-100
-num = int(input("Think about number between 0 until 100: "))
-count = 1
+input("Think of a number between 0-100... press enter you are ready")
+count = 0
 min = 0
 max = 100
 
@@ -10,9 +10,9 @@ max = 100
 guss_number = randint(min, max)
 print(f"The computer guss the number {guss_number}")
 
-while guss_number != num:
+user_intent = input("Write lower or higher or correct: ")
+while user_intent != "correct":
     count += 1
-    user_intent = input("Write lower or higher: ")
     if user_intent == "lower":
         min = guss_number
         guss_number = randint(min, max)
@@ -21,5 +21,6 @@ while guss_number != num:
         guss_number = randint(min, max)
 
     print(f"The computer guss the number {guss_number}")
+    user_intent = input("Write lower or higher or correct: ")
 
 print(f"The computer guss the number after {count} tries")

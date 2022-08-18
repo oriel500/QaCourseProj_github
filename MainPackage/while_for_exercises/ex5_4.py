@@ -7,5 +7,4 @@ for i in range(7):
         max = num
         x = i+1
 
-
 print(x)

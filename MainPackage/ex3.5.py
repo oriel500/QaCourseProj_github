@@ -1,15 +1,11 @@
 length_series= int(input("Enter how many digits: "))
+first = 0
+second = 1
+print(first, second, end=' ')
 
-for i in range(length_series):
-    if i == 0:
-        first = 0
-        print(i)
-    elif i == 1:
-        second = 1
-        print(i)
-    else:
-        sum = first + second
-        first = second
-        second = sum
-        print(sum)
+for i in range(length_series-2):
+    sum = first + second
+    first = second
+    second = sum
+    print(sum, end=' ')
 

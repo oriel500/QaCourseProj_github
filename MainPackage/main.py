@@ -1,15 +1,5 @@
 # My first python program
 
-arr = [0, 1, 2, 3, 4, 5]
-new_arr = arr[::-1]
+list1 = [1, 2, 3, 4, 5, 3]
 
-print(arr)
-print(new_arr)
-
-name = 'Hello'
-is_h = 'H' in name
-test = name
-print(is_h)
-
-print("Show me push")
-
+print(list1.index(3, 2))
