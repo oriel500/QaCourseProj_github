@@ -1,5 +1,8 @@
+from random import randint
+
 # My first python program
-
-list1 = [1, 2, 3, 4, 5, 3]
-
-print(list1.index(3, 2))
+d= {'name':"Oriel",'last': "Naim"}
+d.update({'other': 'Lidor'})
+tup1 = d.items()
+print(tup1)
+print(d)
