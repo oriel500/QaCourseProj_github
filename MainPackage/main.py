@@ -1,8 +1,9 @@
-from random import randint
+import datetime
+import time
+import random
 
-# My first python program
-d= {'name':"Oriel",'last': "Naim"}
-d.update({'other': 'Lidor'})
-tup1 = d.items()
-print(tup1)
-print(d)
+
+dic = {1: 10, 2: 20, 3: 300, 0: 14}
+
+s = {2, 5, 6, 3}
+print()

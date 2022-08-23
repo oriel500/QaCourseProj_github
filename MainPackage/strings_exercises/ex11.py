@@ -1,10 +1,13 @@
-word = input("Enter word: ")
 sentence = input("Enter sentence: ")
-list1 = sentence.split()
-list2 = []
+word = input("Enter word: ")
+# i am learning python and i am not learning java and i am amazed
 
-for index in range(len(list1)):
-    if list1[index] == word:
-        list2.append(index)
+list1 = []
+start_index = 0
 
-print(list2)
+for i in range(sentence.count(word)):
+    fount_index = sentence.index(word, start_index)
+    list1.append(fount_index)
+    start_index = fount_index + 1
+
+print(list1)

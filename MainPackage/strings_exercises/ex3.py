@@ -1,11 +1,9 @@
 word = input("Enter word: ")
 letter = input("Enter letter: ")
 
-if letter not in word:
-    print(-1)
+for i in range(len(word)):
+    if word[i] == letter:
+        print(i)
+        break
 else:
-    for i in range(len(word)):
-        if word[i] == letter:
-            print(i)
-            break
-
+    print(-1)
