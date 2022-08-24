@@ -1,9 +1,17 @@
-import datetime
-import time
-import random
+from MainPackage.CLASSES.Car import *
 
 
-dic = {1: 10, 2: 20, 3: 300, 0: 14}
+def create_list_double(first=0, end=1):
+    """ get number and create list until the number, return list with just double numbers """
+    list_temp = []
+    for i in range(first, end + 1):
+        if i % 2 == 0:
+            list_temp.append(i)
+    return list_temp
 
-s = {2, 5, 6, 3}
-print()
+
+# === main program ===
+list1 = create_list_double(1, 10)
+print(list1)
+
+car = Car()
