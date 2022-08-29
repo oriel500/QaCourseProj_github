@@ -1,8 +1,15 @@
-class Person:
-    def __init__(self, _name, _age, _num_children):
-        self.name = _name
+from MainPackage.OBJECTS.Student import Student
+
+
+class Person(Student):
+    def __init__(self, _age, _num_children, _id, _name, _grade):
+        Student.__init__(self, _id, _name, _grade)
         self.age = _age
         self.num_children = _num_children
+
+    def update_grade(self, new_grade):
+        if new_grade >= 0:
+            self.grade = new_grade
 
     def has_children(self):
         if self.num_children <= 0:
@@ -19,7 +26,7 @@ class Person:
             return 'Senior'
 
     def __str__(self):
-        return f'name: {self.name}, age: {self.age}, children: {self.num_children}'
+        return f'name: {self.name}, age: {self.age}, children: {self.num_children}, grade: {self.grade}'
 
 
 # == main ==
