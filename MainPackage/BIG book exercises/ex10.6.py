@@ -1,4 +1,4 @@
-def count_upper_lower_letter (word):
+def count_upper_lower_letter(word):
     count_upper = 0
     count_lower = 0
     if type(word) is str:
