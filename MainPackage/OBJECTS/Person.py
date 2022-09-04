@@ -1,4 +1,4 @@
-from MainPackage.OBJECTS.Student import Student
+from MainPackage.OBJECTS.Student2 import Student
 
 
 class Person(Student):
