@@ -1,18 +1,19 @@
-from MainPackage.OBJECTS.Hard_Disk import Hard_disk
-from MainPackage.OBJECTS.Person import Person
-from MainPackage.OBJECTS.Student2 import Student
+# get list sort and return minimal div
+def min_div(list1: list):
+    if len(list1) == 1:
+        return list1[0]
+
+    if list1[0] % list1[1] != 0:
+        list1[0] *= list1[1]
+    else:
+        list1[0] /= list1[1]
+
+    list1[1] = list1[-1]
+    list1.pop()
+    return min_div(list1[:-1])
 
 
 # === main program ===
-dic1 = {1:10, 2:20}
-print(10 in dic1)
-# try:  # check if you have error
-#     a = 5.5
-#     print(a/"2")
-#     print(a / 1)
-# except:
-#     print("run if have error")
-# else:
-#     print("run if  have no errors")
-# finally:
-#     print("always happen")
+
+list2 = [2, 3, 4]
+print(min_div(list2))

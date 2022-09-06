@@ -47,5 +47,3 @@ class Student:
 
     def __repr__(self):
         return f'|id: {self.id}, name: {self.name}, avg: {self.average()}|'
-
-

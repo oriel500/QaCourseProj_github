@@ -1,6 +1,6 @@
 # main file of objects: Student and Course
-from Student import Student
-from Course import Course
+from MainPackage.OBJECTS.Student import Student
+from MainPackage.OBJECTS.Course import Course
 
 print("===CREATE COURSE===")
 id_course = int(input("Please enter id for new course: "))

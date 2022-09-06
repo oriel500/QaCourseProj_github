@@ -1,11 +1,20 @@
 # Course Object
-from MainPackage.OBJECTS.Student import Student
+from Student import Student
 
 
 class Course:
     """object holds information about the course"""
 
     def __init__(self, _id_course: int, _name: str, _max_of_students: int):
+        if (type(_id_course) != int
+                or type(_name) != str
+                    or type(_max_of_students) != int):
+            raise TypeError("The type is error at One of the argument!!!")
+        if _id_course <= 0:
+            raise ValueError("The id must be positive number or zero!!!")
+        if _max_of_students < 0:
+            raise ValueError("The capacity must be positive number!!!")
+
         self.id = _id_course
         self.name = _name
         self.subjects = {}  # key = subject, val = name of teacher
@@ -14,6 +23,13 @@ class Course:
 
     def add_student(self, student: Student):
         """add student to list in course and return true if successes"""
+        if type(student) != Student:
+            raise TypeError("The argument must be type of Student!!!")
+
+        if student in self.students:
+            print("# The student exist in the course #")
+            return False
+
         if len(self.students) < self.max:
             self.students.append(student)
             return True
