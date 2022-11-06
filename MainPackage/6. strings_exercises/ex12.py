@@ -1,9 +1,7 @@
 sentence = input("Enter sentence: ")
 list1 = sentence.split()
-sentence = ""
 
-for word in list1:
-    sentence += word.capitalize()
-    sentence += " "
-
+for i in range(len(list1)):
+    list1[i] = list1[i].capitalize()
+sentence = " ".join(list1)
 print(sentence)

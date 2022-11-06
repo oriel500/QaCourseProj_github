@@ -1,19 +1,15 @@
-# get list sort and return minimal div
-def min_div(list1: list):
-    if len(list1) == 1:
-        return list1[0]
+def dup_lists(first, second):
+    new_list = []
+    first_index = 0
+    for i in range(first.count(second)):
+        first_index = first.index(second, first_index) + len(second)
+        new_list.append(first_index-len(second))
+        if first_index >= len(first):
+            return new_list
+    new_list.append(first_index)
+    return new_list
 
-    if list1[0] % list1[1] != 0:
-        list1[0] *= list1[1]
-    else:
-        list1[0] /= list1[1]
-
-    list1[1] = list1[-1]
-    list1.pop()
-    return min_div(list1[:-1])
+print(dup_lists("oriel oriel or", "or"))
 
 
-# === main program ===
 
-list2 = [2, 3, 4]
-print(min_div(list2))

@@ -16,7 +16,7 @@ def count_list(list1: list, num: float):
 
 
 def find(list1: list, num: float, start_index: int):
-    for i in range(start_index,len(list1)):
+    for i in range(start_index, len(list1)):
         if list1[i] == num:
             return i
 

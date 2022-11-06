@@ -1,5 +1,6 @@
 sentence = input("Enter sentence: ")
 word = input("Enter word: ")
+word = word + " "
 # i am learning python and i am not learning java and i am amazed
 
 list1 = []
